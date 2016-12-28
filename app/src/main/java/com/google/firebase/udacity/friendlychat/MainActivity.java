@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     // Firebase
     mFirebaseDatabase = FirebaseDatabase.getInstance();
     mMessageDatabaseReference = mFirebaseDatabase.getReference().child("messages");
-    
+
     // Initialize references to views
     mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
     mMessageListView = (ListView) findViewById(R.id.messageListView);
@@ -109,7 +109,9 @@ public class MainActivity extends AppCompatActivity {
       @Override
       public void onClick(View view) {
         // TODO: Send messages on click
-
+        FriendlyMessage friendlyMessage = new FriendlyMessage(mMessageEditText.getText().toString(),
+            mUsername, null);
+        mMessageDatabaseReference.push().setValue(friendlyMessage);
         // Clear input box
         mMessageEditText.setText("");
       }
