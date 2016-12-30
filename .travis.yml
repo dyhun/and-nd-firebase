@@ -1,0 +1,5 @@
+language: android
+android:
+  components:
+    - android-24
+    - sys-img-armeabi-v7a-android-24
