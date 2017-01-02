@@ -14,5 +14,3 @@ android:
     - android-sdk-license-c81a61d9
     - android-sdk-license-.+
     - google-gdk-license-.+
-script: 
-  - "./gradle build connectedCheck
